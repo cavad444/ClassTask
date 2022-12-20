@@ -75,16 +75,23 @@ namespace ClassTask
         
         public void Sell()
         {
-            if(_name == null || _count <=0 || _price < 1)
+            if(_name == null || _count <0 || _price < 1)
             {
                 Console.WriteLine("Satish yuaxarida yazilan sebeblere gore bash vermedi!");
             }
             else
             {
-                _count -= 1;
-                _totalincome += _price;
-                Console.WriteLine($"Satish bash verdi {_name} sayi azalaraq {_count} oldu, umumi gelir ise artaraq {_totalincome} manat oldu. ");
-
+                if (_count == 0)
+                {
+                    Console.WriteLine("Mehsul qurtardi");
+                    
+                }
+                else
+                {
+                    _count -= 1;
+                    _totalincome += _price;
+                    Console.WriteLine($"Satish bash verdi {_name} sayi azalaraq {_count} oldu, umumi gelir ise artaraq {_totalincome} manat oldu. ");
+                }
             }
             
         }
