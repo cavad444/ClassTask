@@ -1,6 +1,9 @@
 ﻿using ClassTask;
 
-Student cavad = new(89,"Cavad","Manafov","695.21");
-cavad.nameAndSurname();
-cavad.showEverything();
-cavad.canTakeExam();
+
+Product product = new Product();
+product.Name = "SU";
+product.Count = 30;
+product.Price = 20;
+product.TotalIncome = 200;
+product.Sell();
